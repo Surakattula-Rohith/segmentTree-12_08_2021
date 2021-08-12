@@ -88,7 +88,7 @@ void build(int *arr, int* tree , int s , int e , int tidx){
     build(arr, tree, s,mid,2*tidx) ;
     build(arr,tree, mid+1 , e , 2*tidx+1) ;
 
-    tree[tidx] = tree[2*tidx] + tree[2*tidx] ;
+    tree[tidx] = tree[2*tidx] + tree[2*tidx+1] ;
 }
 
 void update(int *arr,int* tree , int s, int e , int tidx , int idx,int val){
