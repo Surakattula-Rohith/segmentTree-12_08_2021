@@ -104,7 +104,7 @@ void update(int *arr,int* tree , int s, int e , int tidx , int idx,int val){
         update(arr,tree,mid+1, e,2*tidx+1 , idx , val) ;
     }
 
-    tree[tidx] = tree[2*tidx] + tree[2*tidx] ;
+    tree[tidx] = tree[2*tidx] + tree[2*tidx+1] ;
 }
 
 
@@ -154,7 +154,7 @@ int main(int argc, char const *argv[])
         else if(type == 2){
             int i ,v ;
             cin >> i >> v ;
-            update(arr,segtree,0,n-1,1,i,v) ;
+            update(arr,segtree,0,n-1,1,i-1,v) ;
         }
     }
 
